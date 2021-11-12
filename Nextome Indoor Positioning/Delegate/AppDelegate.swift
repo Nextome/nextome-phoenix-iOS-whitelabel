@@ -130,6 +130,12 @@ class AppDelegate: FlutterAppDelegate {
             self.mapChannel.invokeMethod("position", arguments: x + "," + y)
         }
         
+        
+        //MARK: new methods (sdk 1.3.1)
+        //sdk status
+        var status = self.sdk?.getSdkState()
+        //venue resources
+        var resource = self.sdk?.getVenueResources()
 
     }
     

@@ -3,22 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		48524FF6249E321300356DE8 /* Nextome.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48524FF5249E321300356DE8 /* Nextome.plist */; };
-		487B5EE825E5C82D00B42828 /* FlutterPluginRegistrant.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE225E5C82C00B42828 /* FlutterPluginRegistrant.xcframework */; };
-		487B5EEE25E5C82F00B42828 /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE625E5C82C00B42828 /* App.xcframework */; };
-		487B5EEF25E5C82F00B42828 /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE625E5C82C00B42828 /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		487B5EF025E5C83100B42828 /* Flutter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE325E5C82C00B42828 /* Flutter.xcframework */; };
-		487B5EF125E5C83100B42828 /* Flutter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE325E5C82C00B42828 /* Flutter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		487B5EF225E5C83300B42828 /* FMDB.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE425E5C82C00B42828 /* FMDB.xcframework */; };
-		487B5EF325E5C83300B42828 /* FMDB.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE425E5C82C00B42828 /* FMDB.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		487B5EF425E5C83400B42828 /* path_provider.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE725E5C82D00B42828 /* path_provider.xcframework */; };
-		487B5EF525E5C83400B42828 /* path_provider.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE725E5C82D00B42828 /* path_provider.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		487B5EF625E5C83500B42828 /* sqflite.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE525E5C82C00B42828 /* sqflite.xcframework */; };
-		487B5EF725E5C83500B42828 /* sqflite.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 487B5EE525E5C82C00B42828 /* sqflite.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4880EA92249B91FA0087B67C /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4880EA86249B91FA0087B67C /* TitilliumWeb-Regular.ttf */; };
 		4880EA93249B91FA0087B67C /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4880EA87249B91FA0087B67C /* TitilliumWeb-BoldItalic.ttf */; };
 		4880EA94249B91FA0087B67C /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4880EA88249B91FA0087B67C /* OFL.txt */; };
@@ -48,11 +37,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				487B5EF325E5C83300B42828 /* FMDB.xcframework in Embed Frameworks */,
-				487B5EF125E5C83100B42828 /* Flutter.xcframework in Embed Frameworks */,
-				487B5EEF25E5C82F00B42828 /* App.xcframework in Embed Frameworks */,
-				487B5EF525E5C83400B42828 /* path_provider.xcframework in Embed Frameworks */,
-				487B5EF725E5C83500B42828 /* sqflite.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,12 +45,6 @@
 
 /* Begin PBXFileReference section */
 		48524FF5249E321300356DE8 /* Nextome.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Nextome.plist; sourceTree = "<group>"; };
-		487B5EE225E5C82C00B42828 /* FlutterPluginRegistrant.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlutterPluginRegistrant.xcframework; path = ios_output/Release/FlutterPluginRegistrant.xcframework; sourceTree = "<group>"; };
-		487B5EE325E5C82C00B42828 /* Flutter.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Flutter.xcframework; path = ios_output/Release/Flutter.xcframework; sourceTree = "<group>"; };
-		487B5EE425E5C82C00B42828 /* FMDB.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FMDB.xcframework; path = ios_output/Release/FMDB.xcframework; sourceTree = "<group>"; };
-		487B5EE525E5C82C00B42828 /* sqflite.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = sqflite.xcframework; path = ios_output/Release/sqflite.xcframework; sourceTree = "<group>"; };
-		487B5EE625E5C82C00B42828 /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = App.xcframework; path = ios_output/Release/App.xcframework; sourceTree = "<group>"; };
-		487B5EE725E5C82D00B42828 /* path_provider.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = path_provider.xcframework; path = ios_output/Release/path_provider.xcframework; sourceTree = "<group>"; };
 		4880EA86249B91FA0087B67C /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 		4880EA87249B91FA0087B67C /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
 		4880EA88249B91FA0087B67C /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
@@ -98,12 +76,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				487B5EEE25E5C82F00B42828 /* App.xcframework in Frameworks */,
-				487B5EE825E5C82D00B42828 /* FlutterPluginRegistrant.xcframework in Frameworks */,
-				487B5EF625E5C83500B42828 /* sqflite.xcframework in Frameworks */,
-				487B5EF025E5C83100B42828 /* Flutter.xcframework in Frameworks */,
-				487B5EF425E5C83400B42828 /* path_provider.xcframework in Frameworks */,
-				487B5EF225E5C83300B42828 /* FMDB.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,12 +112,6 @@
 		48D8C2D8249A3B5900C39BE1 = {
 			isa = PBXGroup;
 			children = (
-				487B5EE625E5C82C00B42828 /* App.xcframework */,
-				487B5EE325E5C82C00B42828 /* Flutter.xcframework */,
-				487B5EE225E5C82C00B42828 /* FlutterPluginRegistrant.xcframework */,
-				487B5EE425E5C82C00B42828 /* FMDB.xcframework */,
-				487B5EE725E5C82D00B42828 /* path_provider.xcframework */,
-				487B5EE525E5C82C00B42828 /* sqflite.xcframework */,
 				48D8C2E3249A3B5900C39BE1 /* Nextome Indoor Positioning */,
 				48D8C2E2249A3B5900C39BE1 /* Products */,
 				D68DA57A520F2BE6DD6133BA /* Pods */,
