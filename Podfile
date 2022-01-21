@@ -8,6 +8,7 @@ plugin 'cocoapods-art', :sources => [
   'nextome-cocoapods-local'
 ]
 
+
 def pods
 	pod 'NVActivityIndicatorView', '~> 4.8.0'
 	pod 'BulletinBoard'
@@ -35,6 +36,8 @@ def pods
 	pod "path_provider_debug", :http => 'https://nextome.jfrog.io/artifactory/nextome-cocoapods-local/flutter-map.tar.gz', :type => 'tgz'
 
 	pod "sqflite_debug", :http => 'https://nextome.jfrog.io/artifactory/nextome-cocoapods-local/flutter-map.tar.gz', :type => 'tgz'
+
+	pod "compass_debug", :http => 'https://nextome.jfrog.io/artifactory/nextome-cocoapods-local/flutter-map.tar.gz', :type => 'tgz'
 
 
 end
