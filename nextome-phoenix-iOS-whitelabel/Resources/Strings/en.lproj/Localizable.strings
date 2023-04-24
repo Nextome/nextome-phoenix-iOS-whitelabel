@@ -1,0 +1,63 @@
+/*
+  Localizable.strings
+  iosApp
+
+  Created by Anna Labellarte on 17/11/22.
+  Copyright © 2022 orgName. All rights reserved.
+*/
+/*
+  en.strings
+  iosApp
+
+  Created by Anna Labellarte on 17/11/22.
+  Copyright © 2022 orgName. All rights reserved.
+*/
+"login_field_error" = "Please fill all the fields";
+"scan_period" = "Scan period";
+"between_scan_period" = "Between Scan Period";
+"beacon_list_max_size" = "Beacon list max size";
+"beacons_empty" = "Scanning in progress…";
+"beacon_rssi_threshold" = "RSSI Threshold";
+"permission_denied_rationale" = "Please accept permissions to use Nextome Test app";
+"permission_background_denied_rationale" = "Nextome Test App will NOT work in background";
+"generic_ok" = "Ok";
+"login_email" = "Email";
+"login_password" = "Password";
+"login_save_credentials" = "Save credentials";
+"login_enter" = "Enter";
+"splash_welcome_back" = "Welcome back";
+"change_user" = "Change user";
+"error_no_apps" = "There are no apps asssociated to this developer account.";
+"no_network" = "No network available, please try later.";
+"loading" = "Loading...";
+"settings_algorithmParameterLabel" = "Algorithm parameters";
+"settings_updateAlert" = "MODIFY ONLY IN ACCORDANCE WITH THE NEXTOME TEAM";
+"settings_scanPeriod" = "Scan period (millis)";
+"settings_betweenScanPeriod" = "Between scan period (millis)";
+"settings_rssiFilter" = "RSSI threshold (db)";
+"settings_detectionsFilter" = "Filter on detections";
+"settings_positionsFilter" = "Filter on positions";
+"settings_eventTimeout" = "Events time out(millis)";
+"settings_default" = "Default";
+"settings_title" = "Advanced settings";
+"settings_additionalFeatures" = "Additional features";
+"generic_yes" = "Yes";
+"generic_no" = "No";
+"settings_sendAssetBeacon" = "Send asset beacon to server";
+"settings_sendAssetPosition" = "Send position to server";
+"settings_save" = "Save";
+"settings_restore" = "Restore";
+"menu_showPoi" = "Show POI LIST";
+"menu_showSettings" = "Show SETTINGS";
+"menu_logout" = "Logout";
+"generic_cancel" = "Cancel";
+"stop"= "STOP";
+"exit_navigation" = "EXIT NAVIGATION";
+"bt_disabled_title" = "Bluetooth disabled";
+"bt_disabled_message" = "The bluetooth is disabled. Be sure to enable it before entering the app";
+"location_permission_disabled_title" = "Permissions restricted";
+"location_permission_disabled_message" = "Without location permissions the localization will not be available";
+"require_location_permission_title" = "Allow the app to access the location";
+"require_location_permission_message" = "Location permissions are disabled, allow access to location before continuing";
+"settings_appSection" = "App settings";
+"settings_debugMode" = "Debug mode";

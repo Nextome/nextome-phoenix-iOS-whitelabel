@@ -1,0 +1,789 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		221C2A5FB809086AD436C48D /* Pods_nextome_phoenix_iOS_whitelabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE5CEB113D675682A4B982DE /* Pods_nextome_phoenix_iOS_whitelabel.framework */; };
+		9E6B97D329D4503B00E2846E /* PoiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97D229D4503B00E2846E /* PoiListViewController.swift */; };
+		9E6B97D529D4504700E2846E /* PoiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97D429D4504700E2846E /* PoiListViewModel.swift */; };
+		9E6B97D729D450B600E2846E /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97D629D450B600E2846E /* PoiTableViewCell.swift */; };
+		9E6B97DC29D4792A00E2846E /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97DB29D4792A00E2846E /* UIView+Extensions.swift */; };
+		9E6B97DE29D4794C00E2846E /* UIView+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97DD29D4794C00E2846E /* UIView+Localization.swift */; };
+		9E6B97E029D4796100E2846E /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97DF29D4796100E2846E /* OptionalExtensions.swift */; };
+		9E6B97E229D4799100E2846E /* KotlinTypesExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97E129D4799100E2846E /* KotlinTypesExtensions.swift */; };
+		9E6B97E729D47AB300E2846E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B97E629D47AB300E2846E /* Localizable.strings */; };
+		9E6B97F229D47B0F00E2846E /* NTMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97EA29D47B0F00E2846E /* NTMTextField.swift */; };
+		9E6B97F329D47B0F00E2846E /* NTMTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B97EB29D47B0F00E2846E /* NTMTextField.xib */; };
+		9E6B97F429D47B0F00E2846E /* NTMCheckbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B97ED29D47B0F00E2846E /* NTMCheckbox.xib */; };
+		9E6B97F529D47B0F00E2846E /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97EE29D47B0F00E2846E /* Checkbox.swift */; };
+		9E6B97F629D47B0F00E2846E /* NTMTextFieldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97F029D47B0F00E2846E /* NTMTextFieldPicker.swift */; };
+		9E6B97F729D47B0F00E2846E /* NTMTextFieldPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B97F129D47B0F00E2846E /* NTMTextFieldPicker.xib */; };
+		9E6B97FD29D47B3D00E2846E /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97FA29D47B3D00E2846E /* SettingsRepository.swift */; };
+		9E6B97FE29D47B3D00E2846E /* SettingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B97FB29D47B3D00E2846E /* SettingsRepositoryImpl.swift */; };
+		9E6B980129D47B8B00E2846E /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B980029D47B8B00E2846E /* KeychainManager.swift */; };
+		9E6B981129D47BBA00E2846E /* NextomeSettingsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B980429D47BBA00E2846E /* NextomeSettingsUI.swift */; };
+		9E6B981929D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B980E29D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift */; };
+		9E6B981B29D47BBA00E2846E /* NextomeAppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B981029D47BBA00E2846E /* NextomeAppSettings.swift */; };
+		9E6B983029D47C0600E2846E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B981C29D47C0600E2846E /* SettingsViewController.swift */; };
+		9E6B983129D47C0600E2846E /* SettingsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B981E29D47C0600E2846E /* SettingsRepository.swift */; };
+		9E6B983229D47C0600E2846E /* SettingsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B981F29D47C0600E2846E /* SettingsRepositoryImpl.swift */; };
+		9E6B983329D47C0600E2846E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B982229D47C0600E2846E /* Localizable.strings */; };
+		9E6B983429D47C0600E2846E /* NTMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B982629D47C0600E2846E /* NTMTextField.swift */; };
+		9E6B983529D47C0600E2846E /* NTMTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B982729D47C0600E2846E /* NTMTextField.xib */; };
+		9E6B983629D47C0600E2846E /* NTMTextFieldPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B982929D47C0600E2846E /* NTMTextFieldPicker.swift */; };
+		9E6B983729D47C0600E2846E /* NTMTextFieldPicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B982A29D47C0600E2846E /* NTMTextFieldPicker.xib */; };
+		9E6B983829D47C0600E2846E /* NTMCheckbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E6B982C29D47C0600E2846E /* NTMCheckbox.xib */; };
+		9E6B983929D47C0600E2846E /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B982D29D47C0600E2846E /* Checkbox.swift */; };
+		9E6B983A29D47C0600E2846E /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B982E29D47C0600E2846E /* PoiTableViewCell.swift */; };
+		9E6B983D29D47C5300E2846E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B983C29D47C5300E2846E /* SettingsViewModel.swift */; };
+		9E6B984229D47CE300E2846E /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984029D47CE300E2846E /* XCAssets+Generated.swift */; };
+		9E6B984329D47CE300E2846E /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984129D47CE300E2846E /* Localizable.swift */; };
+		9E6B984529D4824000E2846E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984429D4824000E2846E /* LoginViewController.swift */; };
+		9E6B984729D482A400E2846E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984629D482A400E2846E /* LoginViewModel.swift */; };
+		9E6B984929D4849A00E2846E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984829D4849A00E2846E /* MapViewModel.swift */; };
+		9E6B984C29D4853400E2846E /* PhoenixSdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */; };
+		9EEDB24129D2FEF0006CA13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24029D2FEF0006CA13B /* AppDelegate.swift */; };
+		9EEDB24329D2FEF0006CA13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24229D2FEF0006CA13B /* SceneDelegate.swift */; };
+		9EEDB24529D2FEF0006CA13B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24429D2FEF0006CA13B /* MapViewController.swift */; };
+		9EEDB24829D2FEF0006CA13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEDB24629D2FEF0006CA13B /* Main.storyboard */; };
+		9EEDB24A29D2FEF1006CA13B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EEDB24929D2FEF1006CA13B /* Assets.xcassets */; };
+		9EEDB24D29D2FEF1006CA13B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EEDB24B29D2FEF1006CA13B /* LaunchScreen.storyboard */; };
+		9EEDB25729D314B9006CA13B /* ViewController+ChildControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25629D314B9006CA13B /* ViewController+ChildControllerExtensions.swift */; };
+		9EEDB25929D31524006CA13B /* OutdoorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25829D31524006CA13B /* OutdoorMapViewController.swift */; };
+		9EEDB25B29D31AE1006CA13B /* UiProgressView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25A29D31AE1006CA13B /* UiProgressView+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		647A44791BB8B7E691C1CCEA /* Pods-nextome-phoenix-iOS-whitelabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nextome-phoenix-iOS-whitelabel.release.xcconfig"; path = "Target Support Files/Pods-nextome-phoenix-iOS-whitelabel/Pods-nextome-phoenix-iOS-whitelabel.release.xcconfig"; sourceTree = "<group>"; };
+		950995D9B972A79C43D985CF /* Pods-nextome-phoenix-iOS-whitelabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nextome-phoenix-iOS-whitelabel.debug.xcconfig"; path = "Target Support Files/Pods-nextome-phoenix-iOS-whitelabel/Pods-nextome-phoenix-iOS-whitelabel.debug.xcconfig"; sourceTree = "<group>"; };
+		9E6B97D229D4503B00E2846E /* PoiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewController.swift; sourceTree = "<group>"; };
+		9E6B97D429D4504700E2846E /* PoiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewModel.swift; sourceTree = "<group>"; };
+		9E6B97D629D450B600E2846E /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
+		9E6B97DB29D4792A00E2846E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		9E6B97DD29D4794C00E2846E /* UIView+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Localization.swift"; sourceTree = "<group>"; };
+		9E6B97DF29D4796100E2846E /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		9E6B97E129D4799100E2846E /* KotlinTypesExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinTypesExtensions.swift; sourceTree = "<group>"; };
+		9E6B97E629D47AB300E2846E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		9E6B97EA29D47B0F00E2846E /* NTMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMTextField.swift; sourceTree = "<group>"; };
+		9E6B97EB29D47B0F00E2846E /* NTMTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMTextField.xib; sourceTree = "<group>"; };
+		9E6B97ED29D47B0F00E2846E /* NTMCheckbox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMCheckbox.xib; sourceTree = "<group>"; };
+		9E6B97EE29D47B0F00E2846E /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		9E6B97F029D47B0F00E2846E /* NTMTextFieldPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMTextFieldPicker.swift; sourceTree = "<group>"; };
+		9E6B97F129D47B0F00E2846E /* NTMTextFieldPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMTextFieldPicker.xib; sourceTree = "<group>"; };
+		9E6B97FA29D47B3D00E2846E /* SettingsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepository.swift; sourceTree = "<group>"; };
+		9E6B97FB29D47B3D00E2846E /* SettingsRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepositoryImpl.swift; sourceTree = "<group>"; };
+		9E6B980029D47B8B00E2846E /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		9E6B980429D47BBA00E2846E /* NextomeSettingsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextomeSettingsUI.swift; sourceTree = "<group>"; };
+		9E6B980E29D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NextomeSettingsUI+Extensions.swift"; sourceTree = "<group>"; };
+		9E6B981029D47BBA00E2846E /* NextomeAppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextomeAppSettings.swift; sourceTree = "<group>"; };
+		9E6B981C29D47C0600E2846E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9E6B981E29D47C0600E2846E /* SettingsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepository.swift; sourceTree = "<group>"; };
+		9E6B981F29D47C0600E2846E /* SettingsRepositoryImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsRepositoryImpl.swift; sourceTree = "<group>"; };
+		9E6B982329D47C0600E2846E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9E6B982629D47C0600E2846E /* NTMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMTextField.swift; sourceTree = "<group>"; };
+		9E6B982729D47C0600E2846E /* NTMTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMTextField.xib; sourceTree = "<group>"; };
+		9E6B982929D47C0600E2846E /* NTMTextFieldPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTMTextFieldPicker.swift; sourceTree = "<group>"; };
+		9E6B982A29D47C0600E2846E /* NTMTextFieldPicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMTextFieldPicker.xib; sourceTree = "<group>"; };
+		9E6B982C29D47C0600E2846E /* NTMCheckbox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NTMCheckbox.xib; sourceTree = "<group>"; };
+		9E6B982D29D47C0600E2846E /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		9E6B982E29D47C0600E2846E /* PoiTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
+		9E6B983C29D47C5300E2846E /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		9E6B984029D47CE300E2846E /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		9E6B984129D47CE300E2846E /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		9E6B984429D4824000E2846E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9E6B984629D482A400E2846E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9E6B984829D4849A00E2846E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoenixSdkUtils.swift; sourceTree = "<group>"; };
+		9EEDB23D29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nextome-phoenix-iOS-whitelabel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EEDB24029D2FEF0006CA13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EEDB24229D2FEF0006CA13B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9EEDB24429D2FEF0006CA13B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9EEDB24729D2FEF0006CA13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EEDB24929D2FEF1006CA13B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EEDB24C29D2FEF1006CA13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EEDB24E29D2FEF1006CA13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EEDB25629D314B9006CA13B /* ViewController+ChildControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ChildControllerExtensions.swift"; sourceTree = "<group>"; };
+		9EEDB25829D31524006CA13B /* OutdoorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdoorMapViewController.swift; sourceTree = "<group>"; };
+		9EEDB25A29D31AE1006CA13B /* UiProgressView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiProgressView+Extensions.swift"; sourceTree = "<group>"; };
+		DE5CEB113D675682A4B982DE /* Pods_nextome_phoenix_iOS_whitelabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nextome_phoenix_iOS_whitelabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EEDB23A29D2FEF0006CA13B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221C2A5FB809086AD436C48D /* Pods_nextome_phoenix_iOS_whitelabel.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37DC266715A59B1B9C5AFF73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE5CEB113D675682A4B982DE /* Pods_nextome_phoenix_iOS_whitelabel.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40475FC83E289ADAF8EBA347 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				950995D9B972A79C43D985CF /* Pods-nextome-phoenix-iOS-whitelabel.debug.xcconfig */,
+				647A44791BB8B7E691C1CCEA /* Pods-nextome-phoenix-iOS-whitelabel.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E6B97DA29D4791500E2846E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97DB29D4792A00E2846E /* UIView+Extensions.swift */,
+				9E6B97DD29D4794C00E2846E /* UIView+Localization.swift */,
+				9E6B97DF29D4796100E2846E /* OptionalExtensions.swift */,
+				9E6B97E129D4799100E2846E /* KotlinTypesExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E6B97E329D47A6A00E2846E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97E529D47A8D00E2846E /* Strings */,
+				9E6B97E429D47A8000E2846E /* Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9E6B97E429D47A8000E2846E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97EC29D47B0F00E2846E /* NTMCheckbox */,
+				9E6B97E929D47B0F00E2846E /* NTMTextField */,
+				9E6B97EF29D47B0F00E2846E /* NTMTextFieldPicker */,
+				9E6B97D629D450B600E2846E /* PoiTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E6B97E529D47A8D00E2846E /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97E829D47ABE00E2846E /* en.lproj */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		9E6B97E829D47ABE00E2846E /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97E629D47AB300E2846E /* Localizable.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		9E6B97E929D47B0F00E2846E /* NTMTextField */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97EA29D47B0F00E2846E /* NTMTextField.swift */,
+				9E6B97EB29D47B0F00E2846E /* NTMTextField.xib */,
+			);
+			path = NTMTextField;
+			sourceTree = "<group>";
+		};
+		9E6B97EC29D47B0F00E2846E /* NTMCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97ED29D47B0F00E2846E /* NTMCheckbox.xib */,
+				9E6B97EE29D47B0F00E2846E /* Checkbox.swift */,
+			);
+			path = NTMCheckbox;
+			sourceTree = "<group>";
+		};
+		9E6B97EF29D47B0F00E2846E /* NTMTextFieldPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97F029D47B0F00E2846E /* NTMTextFieldPicker.swift */,
+				9E6B97F129D47B0F00E2846E /* NTMTextFieldPicker.xib */,
+			);
+			path = NTMTextFieldPicker;
+			sourceTree = "<group>";
+		};
+		9E6B97F829D47B3D00E2846E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B97FA29D47B3D00E2846E /* SettingsRepository.swift */,
+				9E6B97FB29D47B3D00E2846E /* SettingsRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9E6B97FF29D47B8B00E2846E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B980029D47B8B00E2846E /* KeychainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		9E6B980229D47BBA00E2846E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B980329D47BBA00E2846E /* UI */,
+				9E6B980D29D47BBA00E2846E /* Parser */,
+				9E6B981029D47BBA00E2846E /* NextomeAppSettings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E6B980329D47BBA00E2846E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B980429D47BBA00E2846E /* NextomeSettingsUI.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9E6B980D29D47BBA00E2846E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B980E29D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		9E6B981D29D47C0600E2846E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B981E29D47C0600E2846E /* SettingsRepository.swift */,
+				9E6B981F29D47C0600E2846E /* SettingsRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9E6B982029D47C0600E2846E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B983F29D47CC200E2846E /* Generated */,
+				9E6B982129D47C0600E2846E /* Strings */,
+				9E6B982429D47C0600E2846E /* Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9E6B982129D47C0600E2846E /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B982229D47C0600E2846E /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		9E6B982429D47C0600E2846E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B982529D47C0600E2846E /* NTMTextField */,
+				9E6B982829D47C0600E2846E /* NTMTextFieldPicker */,
+				9E6B982B29D47C0600E2846E /* NTMCheckbox */,
+				9E6B982E29D47C0600E2846E /* PoiTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E6B982529D47C0600E2846E /* NTMTextField */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B982629D47C0600E2846E /* NTMTextField.swift */,
+				9E6B982729D47C0600E2846E /* NTMTextField.xib */,
+			);
+			path = NTMTextField;
+			sourceTree = "<group>";
+		};
+		9E6B982829D47C0600E2846E /* NTMTextFieldPicker */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B982929D47C0600E2846E /* NTMTextFieldPicker.swift */,
+				9E6B982A29D47C0600E2846E /* NTMTextFieldPicker.xib */,
+			);
+			path = NTMTextFieldPicker;
+			sourceTree = "<group>";
+		};
+		9E6B982B29D47C0600E2846E /* NTMCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B982C29D47C0600E2846E /* NTMCheckbox.xib */,
+				9E6B982D29D47C0600E2846E /* Checkbox.swift */,
+			);
+			path = NTMCheckbox;
+			sourceTree = "<group>";
+		};
+		9E6B983F29D47CC200E2846E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B984129D47CE300E2846E /* Localizable.swift */,
+				9E6B984029D47CE300E2846E /* XCAssets+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		9E6B984A29D4852900E2846E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		9EEDB23429D2FEF0006CA13B = {
+			isa = PBXGroup;
+			children = (
+				9EEDB23F29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel */,
+				9EEDB23E29D2FEF0006CA13B /* Products */,
+				40475FC83E289ADAF8EBA347 /* Pods */,
+				37DC266715A59B1B9C5AFF73 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9EEDB23E29D2FEF0006CA13B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EEDB23D29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EEDB23F29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel */ = {
+			isa = PBXGroup;
+			children = (
+				9E6B984A29D4852900E2846E /* Utils */,
+				9E6B981D29D47C0600E2846E /* Repository */,
+				9E6B982029D47C0600E2846E /* Resources */,
+				9E6B980229D47BBA00E2846E /* Model */,
+				9E6B97FF29D47B8B00E2846E /* Manager */,
+				9E6B97F829D47B3D00E2846E /* Repository */,
+				9E6B97E329D47A6A00E2846E /* Resources */,
+				9E6B97DA29D4791500E2846E /* Extensions */,
+				9EEDB24029D2FEF0006CA13B /* AppDelegate.swift */,
+				9E6B981C29D47C0600E2846E /* SettingsViewController.swift */,
+				9E6B983C29D47C5300E2846E /* SettingsViewModel.swift */,
+				9EEDB24229D2FEF0006CA13B /* SceneDelegate.swift */,
+				9EEDB24429D2FEF0006CA13B /* MapViewController.swift */,
+				9E6B984829D4849A00E2846E /* MapViewModel.swift */,
+				9EEDB24629D2FEF0006CA13B /* Main.storyboard */,
+				9EEDB24929D2FEF1006CA13B /* Assets.xcassets */,
+				9EEDB24B29D2FEF1006CA13B /* LaunchScreen.storyboard */,
+				9EEDB24E29D2FEF1006CA13B /* Info.plist */,
+				9EEDB25629D314B9006CA13B /* ViewController+ChildControllerExtensions.swift */,
+				9EEDB25829D31524006CA13B /* OutdoorMapViewController.swift */,
+				9EEDB25A29D31AE1006CA13B /* UiProgressView+Extensions.swift */,
+				9E6B97D229D4503B00E2846E /* PoiListViewController.swift */,
+				9E6B97D429D4504700E2846E /* PoiListViewModel.swift */,
+				9E6B984429D4824000E2846E /* LoginViewController.swift */,
+				9E6B984629D482A400E2846E /* LoginViewModel.swift */,
+			);
+			path = "nextome-phoenix-iOS-whitelabel";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EEDB23C29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EEDB25129D2FEF1006CA13B /* Build configuration list for PBXNativeTarget "nextome-phoenix-iOS-whitelabel" */;
+			buildPhases = (
+				3FCC0C3C0A2C605AD71DDC72 /* [CP] Check Pods Manifest.lock */,
+				9EEDB23929D2FEF0006CA13B /* Sources */,
+				9EEDB23A29D2FEF0006CA13B /* Frameworks */,
+				9EEDB23B29D2FEF0006CA13B /* Resources */,
+				8405A522C40148819AC0DDA5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "nextome-phoenix-iOS-whitelabel";
+			productName = "nextome-phoenix-iOS-whitelabel";
+			productReference = 9EEDB23D29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EEDB23529D2FEF0006CA13B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					9EEDB23C29D2FEF0006CA13B = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 9EEDB23829D2FEF0006CA13B /* Build configuration list for PBXProject "nextome-phoenix-iOS-whitelabel" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EEDB23429D2FEF0006CA13B;
+			productRefGroup = 9EEDB23E29D2FEF0006CA13B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EEDB23C29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EEDB23B29D2FEF0006CA13B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E6B97F429D47B0F00E2846E /* NTMCheckbox.xib in Resources */,
+				9E6B983829D47C0600E2846E /* NTMCheckbox.xib in Resources */,
+				9E6B97F729D47B0F00E2846E /* NTMTextFieldPicker.xib in Resources */,
+				9E6B97F329D47B0F00E2846E /* NTMTextField.xib in Resources */,
+				9EEDB24D29D2FEF1006CA13B /* LaunchScreen.storyboard in Resources */,
+				9E6B97E729D47AB300E2846E /* Localizable.strings in Resources */,
+				9E6B983729D47C0600E2846E /* NTMTextFieldPicker.xib in Resources */,
+				9E6B983329D47C0600E2846E /* Localizable.strings in Resources */,
+				9E6B983529D47C0600E2846E /* NTMTextField.xib in Resources */,
+				9EEDB24A29D2FEF1006CA13B /* Assets.xcassets in Resources */,
+				9EEDB24829D2FEF0006CA13B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FCC0C3C0A2C605AD71DDC72 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-nextome-phoenix-iOS-whitelabel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8405A522C40148819AC0DDA5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nextome-phoenix-iOS-whitelabel/Pods-nextome-phoenix-iOS-whitelabel-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-nextome-phoenix-iOS-whitelabel/Pods-nextome-phoenix-iOS-whitelabel-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-nextome-phoenix-iOS-whitelabel/Pods-nextome-phoenix-iOS-whitelabel-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EEDB23929D2FEF0006CA13B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEDB24529D2FEF0006CA13B /* MapViewController.swift in Sources */,
+				9E6B97F229D47B0F00E2846E /* NTMTextField.swift in Sources */,
+				9E6B97E029D4796100E2846E /* OptionalExtensions.swift in Sources */,
+				9E6B97D529D4504700E2846E /* PoiListViewModel.swift in Sources */,
+				9E6B984229D47CE300E2846E /* XCAssets+Generated.swift in Sources */,
+				9E6B983929D47C0600E2846E /* Checkbox.swift in Sources */,
+				9E6B984529D4824000E2846E /* LoginViewController.swift in Sources */,
+				9E6B983D29D47C5300E2846E /* SettingsViewModel.swift in Sources */,
+				9E6B980129D47B8B00E2846E /* KeychainManager.swift in Sources */,
+				9E6B983A29D47C0600E2846E /* PoiTableViewCell.swift in Sources */,
+				9E6B984729D482A400E2846E /* LoginViewModel.swift in Sources */,
+				9E6B984929D4849A00E2846E /* MapViewModel.swift in Sources */,
+				9E6B983429D47C0600E2846E /* NTMTextField.swift in Sources */,
+				9E6B981129D47BBA00E2846E /* NextomeSettingsUI.swift in Sources */,
+				9E6B97DC29D4792A00E2846E /* UIView+Extensions.swift in Sources */,
+				9E6B97FE29D47B3D00E2846E /* SettingsRepositoryImpl.swift in Sources */,
+				9E6B97DE29D4794C00E2846E /* UIView+Localization.swift in Sources */,
+				9E6B984329D47CE300E2846E /* Localizable.swift in Sources */,
+				9E6B984C29D4853400E2846E /* PhoenixSdkUtils.swift in Sources */,
+				9E6B983229D47C0600E2846E /* SettingsRepositoryImpl.swift in Sources */,
+				9E6B981929D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift in Sources */,
+				9EEDB24129D2FEF0006CA13B /* AppDelegate.swift in Sources */,
+				9EEDB24329D2FEF0006CA13B /* SceneDelegate.swift in Sources */,
+				9E6B97E229D4799100E2846E /* KotlinTypesExtensions.swift in Sources */,
+				9E6B97F629D47B0F00E2846E /* NTMTextFieldPicker.swift in Sources */,
+				9EEDB25929D31524006CA13B /* OutdoorMapViewController.swift in Sources */,
+				9E6B983029D47C0600E2846E /* SettingsViewController.swift in Sources */,
+				9EEDB25729D314B9006CA13B /* ViewController+ChildControllerExtensions.swift in Sources */,
+				9E6B97D329D4503B00E2846E /* PoiListViewController.swift in Sources */,
+				9E6B97D729D450B600E2846E /* PoiTableViewCell.swift in Sources */,
+				9E6B97FD29D47B3D00E2846E /* SettingsRepository.swift in Sources */,
+				9E6B983629D47C0600E2846E /* NTMTextFieldPicker.swift in Sources */,
+				9E6B983129D47C0600E2846E /* SettingsRepository.swift in Sources */,
+				9EEDB25B29D31AE1006CA13B /* UiProgressView+Extensions.swift in Sources */,
+				9E6B97F529D47B0F00E2846E /* Checkbox.swift in Sources */,
+				9E6B981B29D47BBA00E2846E /* NextomeAppSettings.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9E6B982229D47C0600E2846E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9E6B982329D47C0600E2846E /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		9EEDB24629D2FEF0006CA13B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EEDB24729D2FEF0006CA13B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EEDB24B29D2FEF1006CA13B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EEDB24C29D2FEF1006CA13B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EEDB24F29D2FEF1006CA13B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EEDB25029D2FEF1006CA13B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EEDB25229D2FEF1006CA13B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 950995D9B972A79C43D985CF /* Pods-nextome-phoenix-iOS-whitelabel.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KXDXPEYCU8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "nextome-phoenix-iOS-whitelabel/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nextome.nextome-phoenix-iOS-whitelabel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EEDB25329D2FEF1006CA13B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 647A44791BB8B7E691C1CCEA /* Pods-nextome-phoenix-iOS-whitelabel.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KXDXPEYCU8;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "nextome-phoenix-iOS-whitelabel/Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app requires permission for localization";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nextome.nextome-phoenix-iOS-whitelabel";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EEDB23829D2FEF0006CA13B /* Build configuration list for PBXProject "nextome-phoenix-iOS-whitelabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EEDB24F29D2FEF1006CA13B /* Debug */,
+				9EEDB25029D2FEF1006CA13B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EEDB25129D2FEF1006CA13B /* Build configuration list for PBXNativeTarget "nextome-phoenix-iOS-whitelabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EEDB25229D2FEF1006CA13B /* Debug */,
+				9EEDB25329D2FEF1006CA13B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EEDB23529D2FEF0006CA13B /* Project object */;
+}
