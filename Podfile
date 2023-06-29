@@ -1,11 +1,8 @@
 platform :ios, '13.2'
 
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/Nextome/Specs.git'
 
-plugin 'cocoapods-art', :sources => [
-    'nextome-map-cocoapods-local',
-    'nextome-sdk-cocoapods-local'
-]
 
 target 'nextome-phoenix-iOS-whitelabel' do
   # Comment the next line if you don't want to use dynamic frameworks
