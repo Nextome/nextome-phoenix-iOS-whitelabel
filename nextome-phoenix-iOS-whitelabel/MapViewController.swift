@@ -8,17 +8,17 @@
 
 import UIKit
 import BLTNBoard
-import PhoenixSdk
+import NextomeLocalization
 import Sheeeeeeeeet
 import Toast_Swift
 
-import PhoenixMapUtils
+import NextomeLocalizationMapUtils
 
 class MapViewController: UIViewController, NextomeMapDelegate {
 
     let CLIENT_ID = "CLIENT_ID"
     let CLIENT_SECRET = "CLIENT_SECRET"
-    var nextomeSdk: NextomePhoenixSdk!
+    var nextomeSdk: NextomeLocalizationSdk!
     var viewModel = MapViewModel()
     
     let openSettingsSegue = "openSettings"
@@ -46,10 +46,10 @@ class MapViewController: UIViewController, NextomeMapDelegate {
         return controller
     }()
     
-    lazy var indoorMapViewController: UIViewController = PhoenixMapHandler.instance.initializeFlutterViewController()
+    lazy var indoorMapViewController: UIViewController = NextomeLocalizationMapHandler.instance.initializeFlutterViewController()
 
     override func viewDidLoad() {
-        PhoenixMapHandler.instance.observeEvents(delegate: self)
+        NextomeLocalizationMapHandler.instance.observeEvents(delegate: self)
         super.viewDidLoad()
         viewModel.delegate = self
         openOutdoorMap()
@@ -81,7 +81,7 @@ class MapViewController: UIViewController, NextomeMapDelegate {
     
     func initNextomeSdk(){
         let appSettings = viewModel.appSettings
-        nextomeSdk = PhoenixSdkUtils.getPhoenixSdkBuilder(fromSettings: appSettings, clientId: CLIENT_ID, clientSecret: CLIENT_SECRET).build()
+        nextomeSdk = NextomeLocalizationSdkUtils.getSdkBuilder(fromSettings: appSettings, clientId: CLIENT_ID, clientSecret: CLIENT_SECRET).build()
     }
     
     func observeSdkResults(){
@@ -174,7 +174,7 @@ class MapViewController: UIViewController, NextomeMapDelegate {
                 self.openIndoorMap()
                 self.viewModel.venueSettings = runningState.venueData.settings
                 self.viewModel.poiList = runningState.venueData.allPois
-                PhoenixMapHandler.instance.setMap(tilesZipPath: runningState.tilesZipPath, mapHeight: runningState.mapHeight, mapWidth: runningState.mapWidth)
+                NextomeLocalizationMapHandler.instance.setMap(tilesZipPath: runningState.tilesZipPath, mapHeight: runningState.mapHeight, mapWidth: runningState.mapWidth)
                 let pois = runningState.venueData.getPoisByMapId(mapId: runningState.mapId)
                 self.showPois(pois)
             }
@@ -205,9 +205,9 @@ class MapViewController: UIViewController, NextomeMapDelegate {
     }
     
     func handleError(_ error: NextomeException){
-        if error is NextomeException.GenericException{
+        if error is GenericException{
             showGenericError(message: error.message)
-        }else if let authError = error as? NextomeException.InvalidCredentialException{
+        }else if let authError = error as? InvalidCredentialException{
             showAuthErrorAlertAndLogout(authError.message)
         }
 
@@ -226,7 +226,7 @@ class MapViewController: UIViewController, NextomeMapDelegate {
     
     
     func showPois(_ pois: [NextomePoi]){
-        PhoenixMapHandler.instance.updatePoiList(pois)
+        NextomeLocalizationMapHandler.instance.updatePoiList(pois)
     }
     
     
@@ -236,7 +236,7 @@ class MapViewController: UIViewController, NextomeMapDelegate {
     }
     
     func updatePointOnMap(position: NextomePosition){
-        PhoenixMapHandler.instance.updatePositionOnMap(position)
+        NextomeLocalizationMapHandler.instance.updatePositionOnMap(position)
     }
     
     
@@ -285,7 +285,7 @@ extension MapViewController{
             let path = vertex.filter({$0.z == lastPosition.mapId})
             DispatchQueue.main.async {
                 self.exitNavigationButton.isHidden = false
-                PhoenixMapHandler.instance.updatePath(path: path)
+                NextomeLocalizationMapHandler.instance.updatePath(path: path)
             }
         })
     }
@@ -299,7 +299,7 @@ extension MapViewController{
     private func clearPathOnMap(){
         exitNavigationButton.isHidden = true
         isShowingPath = false
-        PhoenixMapHandler.instance.clearPath()
+        NextomeLocalizationMapHandler.instance.clearPath()
     }
 }
 

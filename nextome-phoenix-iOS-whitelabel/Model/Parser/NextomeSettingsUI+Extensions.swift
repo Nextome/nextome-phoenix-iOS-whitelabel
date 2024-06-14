@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PhoenixSdk
+import NextomeLocalization
 
 extension NextomeSettingsUI{
     func asNextomeAppSettings() -> NextomeAppSettings{

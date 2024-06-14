@@ -8,7 +8,7 @@
 
 import Foundation
 import Resolver
-import PhoenixSdk
+import NextomeLocalization
 
 class SettingsViewModel{
     private var settingsRepository: SettingsRepository = SettingsRepositoryImpl()

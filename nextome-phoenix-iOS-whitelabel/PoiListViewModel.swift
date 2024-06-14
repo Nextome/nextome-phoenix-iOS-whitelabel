@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PhoenixSdk
+import NextomeLocalization
 
 class PoiListViewModel{
     private var poiList: [NextomePoi] = []

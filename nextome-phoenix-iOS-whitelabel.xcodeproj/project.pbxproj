@@ -45,7 +45,7 @@
 		9E6B984529D4824000E2846E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984429D4824000E2846E /* LoginViewController.swift */; };
 		9E6B984729D482A400E2846E /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984629D482A400E2846E /* LoginViewModel.swift */; };
 		9E6B984929D4849A00E2846E /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984829D4849A00E2846E /* MapViewModel.swift */; };
-		9E6B984C29D4853400E2846E /* PhoenixSdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */; };
+		9E6B984C29D4853400E2846E /* NextomeLocalizationSdkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6B984B29D4853400E2846E /* NextomeLocalizationSdkUtils.swift */; };
 		9EEDB24129D2FEF0006CA13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24029D2FEF0006CA13B /* AppDelegate.swift */; };
 		9EEDB24329D2FEF0006CA13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24229D2FEF0006CA13B /* SceneDelegate.swift */; };
 		9EEDB24529D2FEF0006CA13B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB24429D2FEF0006CA13B /* MapViewController.swift */; };
@@ -97,7 +97,7 @@
 		9E6B984429D4824000E2846E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9E6B984629D482A400E2846E /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		9E6B984829D4849A00E2846E /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
-		9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoenixSdkUtils.swift; sourceTree = "<group>"; };
+		9E6B984B29D4853400E2846E /* NextomeLocalizationSdkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextomeLocalizationSdkUtils.swift; sourceTree = "<group>"; };
 		9EEDB23D29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "nextome-phoenix-iOS-whitelabel.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EEDB24029D2FEF0006CA13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EEDB24229D2FEF0006CA13B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -335,7 +335,7 @@
 		9E6B984A29D4852900E2846E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				9E6B984B29D4853400E2846E /* PhoenixSdkUtils.swift */,
+				9E6B984B29D4853400E2846E /* NextomeLocalizationSdkUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -531,7 +531,7 @@
 				9E6B97FE29D47B3D00E2846E /* SettingsRepositoryImpl.swift in Sources */,
 				9E6B97DE29D4794C00E2846E /* UIView+Localization.swift in Sources */,
 				9E6B984329D47CE300E2846E /* Localizable.swift in Sources */,
-				9E6B984C29D4853400E2846E /* PhoenixSdkUtils.swift in Sources */,
+				9E6B984C29D4853400E2846E /* NextomeLocalizationSdkUtils.swift in Sources */,
 				9E6B983229D47C0600E2846E /* SettingsRepositoryImpl.swift in Sources */,
 				9E6B981929D47BBA00E2846E /* NextomeSettingsUI+Extensions.swift in Sources */,
 				9EEDB24129D2FEF0006CA13B /* AppDelegate.swift in Sources */,

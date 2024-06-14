@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PhoenixSdk
+import NextomeLocalization
 
 class PoiListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, PoiListDelegate {
 

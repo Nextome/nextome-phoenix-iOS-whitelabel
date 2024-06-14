@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PhoenixMapUtils
+import NextomeLocalizationMapUtils
 import IQKeyboardManagerSwift
 
 @main
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        PhoenixMapHandler.instance.initialize()
+        NextomeLocalizationMapHandler.instance.initialize()
         IQKeyboardManager.shared.enable = true
 
         return true

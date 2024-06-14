@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PhoenixSdk
+import NextomeLocalization
 
 class SettingsViewController: UIViewController {
 

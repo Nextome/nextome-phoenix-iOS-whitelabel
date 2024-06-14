@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import PhoenixSdk
+import NextomeLocalization
 
 class MapViewModel{
     var settingsRepository: SettingsRepository = SettingsRepositoryImpl()
@@ -23,11 +23,11 @@ class MapViewModel{
     
     func handleError(error: NextomeException){
         
-        if error is NextomeException.InvalidCredentialException{
+        if error is InvalidCredentialException{
             self.delegate?.onAuthenticationError(message: error.message)
-        }else if error is NextomeException.CriticalException{
+        }else if error is CriticalException{
             self.delegate?.showGenericError(message: error.message)
-        }else if error is NextomeException.GenericException && appSettings.isDebugModeEnabled{
+        }else if error is GenericException && appSettings.isDebugModeEnabled{
             self.delegate?.showGenericError(message: error.message)
         }
     }

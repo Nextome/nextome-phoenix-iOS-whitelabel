@@ -1,11 +1,11 @@
 
 import Foundation
-import PhoenixSdk
+import NextomeLocalization
 
-class PhoenixSdkUtils{
-    static func getPhoenixSdkBuilder(fromSettings settings: NextomeAppSettings, clientId: String, clientSecret: String) -> NextomePhoenixSdk.Builder{
+class NextomeLocalizationSdkUtils{
+    static func getSdkBuilder(fromSettings settings: NextomeAppSettings, clientId: String, clientSecret: String) -> NextomeLocalizationSdk.Builder{
         
-        let builder = NextomePhoenixSdk.Builder(clientId: clientId, clientSecret: clientSecret)
+        let builder = NextomeLocalizationSdk.Builder(clientId: clientId, clientSecret: clientSecret)
         
         if let scanPeriod = settings.scanPeriod{
             builder.setScanPeriod(millis: scanPeriod)

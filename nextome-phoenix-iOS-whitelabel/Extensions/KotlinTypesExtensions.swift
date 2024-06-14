@@ -7,7 +7,7 @@
 
 
 import Foundation
-import PhoenixSdk
+import NextomeLocalization
 
 extension Bool{
     func asKotlinBoolean() -> KotlinBoolean{
