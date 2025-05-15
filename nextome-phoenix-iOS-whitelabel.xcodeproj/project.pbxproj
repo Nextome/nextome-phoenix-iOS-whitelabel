@@ -55,6 +55,9 @@
 		9EEDB25729D314B9006CA13B /* ViewController+ChildControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25629D314B9006CA13B /* ViewController+ChildControllerExtensions.swift */; };
 		9EEDB25929D31524006CA13B /* OutdoorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25829D31524006CA13B /* OutdoorMapViewController.swift */; };
 		9EEDB25B29D31AE1006CA13B /* UiProgressView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEDB25A29D31AE1006CA13B /* UiProgressView+Extensions.swift */; };
+		C92D80C62DD62541008AD96F /* IndoorMapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D80C52DD62541008AD96F /* IndoorMapManager.swift */; };
+		C9E3747C2DD6295A00D9E624 /* current_position.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E3747A2DD6295A00D9E624 /* current_position.png */; };
+		C9E3747E2DD62D9900D9E624 /* poi_colored.png in Resources */ = {isa = PBXBuildFile; fileRef = C9E3747D2DD62D9900D9E624 /* poi_colored.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +112,9 @@
 		9EEDB25629D314B9006CA13B /* ViewController+ChildControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+ChildControllerExtensions.swift"; sourceTree = "<group>"; };
 		9EEDB25829D31524006CA13B /* OutdoorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutdoorMapViewController.swift; sourceTree = "<group>"; };
 		9EEDB25A29D31AE1006CA13B /* UiProgressView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiProgressView+Extensions.swift"; sourceTree = "<group>"; };
+		C92D80C52DD62541008AD96F /* IndoorMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorMapManager.swift; sourceTree = "<group>"; };
+		C9E3747A2DD6295A00D9E624 /* current_position.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = current_position.png; sourceTree = "<group>"; };
+		C9E3747D2DD62D9900D9E624 /* poi_colored.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poi_colored.png; sourceTree = "<group>"; };
 		DE5CEB113D675682A4B982DE /* Pods_nextome_phoenix_iOS_whitelabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nextome_phoenix_iOS_whitelabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -343,6 +349,8 @@
 		9EEDB23429D2FEF0006CA13B = {
 			isa = PBXGroup;
 			children = (
+				C9E3747D2DD62D9900D9E624 /* poi_colored.png */,
+				C9E3747A2DD6295A00D9E624 /* current_position.png */,
 				9EEDB23F29D2FEF0006CA13B /* nextome-phoenix-iOS-whitelabel */,
 				9EEDB23E29D2FEF0006CA13B /* Products */,
 				40475FC83E289ADAF8EBA347 /* Pods */,
@@ -386,6 +394,7 @@
 				9E6B97D429D4504700E2846E /* PoiListViewModel.swift */,
 				9E6B984429D4824000E2846E /* LoginViewController.swift */,
 				9E6B984629D482A400E2846E /* LoginViewModel.swift */,
+				C92D80C52DD62541008AD96F /* IndoorMapManager.swift */,
 			);
 			path = "nextome-phoenix-iOS-whitelabel";
 			sourceTree = "<group>";
@@ -455,7 +464,9 @@
 				9E6B97F729D47B0F00E2846E /* NTMTextFieldPicker.xib in Resources */,
 				9E6B97F329D47B0F00E2846E /* NTMTextField.xib in Resources */,
 				9EEDB24D29D2FEF1006CA13B /* LaunchScreen.storyboard in Resources */,
+				C9E3747C2DD6295A00D9E624 /* current_position.png in Resources */,
 				9E6B97E729D47AB300E2846E /* Localizable.strings in Resources */,
+				C9E3747E2DD62D9900D9E624 /* poi_colored.png in Resources */,
 				9E6B983729D47C0600E2846E /* NTMTextFieldPicker.xib in Resources */,
 				9E6B983329D47C0600E2846E /* Localizable.strings in Resources */,
 				9E6B983529D47C0600E2846E /* NTMTextField.xib in Resources */,
@@ -518,6 +529,7 @@
 				9E6B97E029D4796100E2846E /* OptionalExtensions.swift in Sources */,
 				9E6B97D529D4504700E2846E /* PoiListViewModel.swift in Sources */,
 				9E6B984229D47CE300E2846E /* XCAssets+Generated.swift in Sources */,
+				C92D80C62DD62541008AD96F /* IndoorMapManager.swift in Sources */,
 				9E6B983929D47C0600E2846E /* Checkbox.swift in Sources */,
 				9E6B984529D4824000E2846E /* LoginViewController.swift in Sources */,
 				9E6B983D29D47C5300E2846E /* SettingsViewModel.swift in Sources */,

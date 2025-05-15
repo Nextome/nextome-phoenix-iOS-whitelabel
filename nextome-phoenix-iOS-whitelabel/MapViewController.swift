@@ -12,12 +12,13 @@ import NextomeLocalization
 import Sheeeeeeeeet
 import Toast_Swift
 
-import NextomeLocalizationMapUtils
+import NextomeMapView
 
-class MapViewController: UIViewController, NextomeMapDelegate {
+class MapViewController: UIViewController {
 
     let CLIENT_ID = "CLIENT_ID"
     let CLIENT_SECRET = "CLIENT_SECRET"
+    
     var nextomeSdk: NextomeLocalizationSdk!
     var viewModel = MapViewModel()
     
@@ -39,6 +40,7 @@ class MapViewController: UIViewController, NextomeMapDelegate {
     var lastPosition: NextomePosition? = nil
     var currentVC: UIViewController? = nil
     
+    var pois: Array<NextomePoi> = []
     
     lazy var outdoorMapViewController: UIViewController = {
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -46,10 +48,11 @@ class MapViewController: UIViewController, NextomeMapDelegate {
         return controller
     }()
     
-    lazy var indoorMapViewController: UIViewController = NextomeLocalizationMapHandler.instance.initializeFlutterViewController()
+    lazy var indoorMapViewController: UIViewController = UIViewController()
 
+    var mapManager: IndoorMapManager = IndoorMapManager()
+    
     override func viewDidLoad() {
-        NextomeLocalizationMapHandler.instance.observeEvents(delegate: self)
         super.viewDidLoad()
         viewModel.delegate = self
         openOutdoorMap()
@@ -171,15 +174,68 @@ class MapViewController: UIViewController, NextomeMapDelegate {
             }else if let runningState = state as? LocalizationRunningState{
                 print("State is RUNNING")
                 self.statusView.isHidden = true
-                self.openIndoorMap()
+                
+                self.initFlutter(onInitialized: {
+                    self.openIndoorMap()
+                    self.setMap(mapId: Int(runningState.mapId), mapTilesUrl: runningState.tilesZipPath, mapHeight: Int(runningState.mapHeight), mapWidth: Int(runningState.mapWidth))
+                    self.observeFlutterMapEvents()
+                })
+                
                 self.viewModel.venueSettings = runningState.venueData.settings
                 self.viewModel.poiList = runningState.venueData.allPois
-                NextomeLocalizationMapHandler.instance.setMap(tilesZipPath: runningState.tilesZipPath, mapHeight: runningState.mapHeight, mapWidth: runningState.mapWidth)
-                let pois = runningState.venueData.getPoisByMapId(mapId: runningState.mapId)
-                self.showPois(pois)
+                
+                self.pois = runningState.venueData.getReachablePoisByMapId(mapId: runningState.mapId)
             }
         })
         watchers.append(watcher)
+    }
+    
+    func initFlutter(onInitialized: @escaping () -> Void){
+        
+        NextomeMapViewHandler.instance.initialize {
+            self.indoorMapViewController = NextomeMapViewHandler.instance.getFlutterViewController()!
+            onInitialized()
+        }
+
+        mapManager.flutterMap.setOnMapReady {
+            self.mapManager.setIndoorMapItems()
+            self.mapManager.buildPois(pois: self.pois)
+        }
+    }
+    
+    func destroyFlutter(){
+        NextomeMapViewHandler.instance.destroy(vc: self.indoorMapViewController) {
+            // Do nothing
+        }
+    }
+    
+    func setMap(mapId: Int, mapTilesUrl: String, mapHeight: Int, mapWidth: Int){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { // await 1 second
+            self.mapManager.loadMapTiles(mapId: mapId, mapTilesUrl: mapTilesUrl, mapHeight: mapHeight, mapWidth: mapWidth)
+        }
+    }
+    
+    func observeFlutterMapEvents(){
+        mapManager.flutterMap.setOnMarkerTap { marker in
+            let poi: NextomePoi? = self.getNextomePoiFromMapMarker(marker: marker)
+            if(self.lastPosition != nil && poi != nil){
+                self.onNavigationSelected(poi: poi!)
+            }
+        }
+    }
+    
+    func getNextomePoiFromMapMarker(marker: NMMarker) -> NextomePoi? {
+        
+        if(marker.id != nil && marker.id!.starts(with: "poi_")){
+            let idStr = marker.id!.replacingOccurrences(of: "poi_", with: "")
+            let id: Int? = Int(idStr)
+            if(id != nil){
+                let res = pois.filter { $0.id == id! }
+                return res.isEmpty ? nil : res[0]
+            }
+        }
+        
+        return nil
     }
     
     func observeErrors(){
@@ -224,22 +280,14 @@ class MapViewController: UIViewController, NextomeMapDelegate {
         statusLabel.text = message
     }
     
-    
-    func showPois(_ pois: [NextomePoi]){
-        NextomeLocalizationMapHandler.instance.updatePoiList(pois)
-    }
-    
-    
     func updatePositionOnFlutterMap(position: NextomePosition){
         updatePointOnMap(position: position)
         updatePathOnMap(position: position)
     }
     
     func updatePointOnMap(position: NextomePosition){
-        NextomeLocalizationMapHandler.instance.updatePositionOnMap(position)
+        self.mapManager.updateBluedotMarker(position: position, callApply: true)
     }
-    
-    
     
     // MARK: - Navigation
 
@@ -285,7 +333,7 @@ extension MapViewController{
             let path = vertex.filter({$0.z == lastPosition.mapId})
             DispatchQueue.main.async {
                 self.exitNavigationButton.isHidden = false
-                NextomeLocalizationMapHandler.instance.updatePath(path: path)
+                self.mapManager.drawPath(path: path)
             }
         })
     }
@@ -299,7 +347,7 @@ extension MapViewController{
     private func clearPathOnMap(){
         exitNavigationButton.isHidden = true
         isShowingPath = false
-        NextomeLocalizationMapHandler.instance.clearPath()
+        self.mapManager.clearPathAndMarker(callApply: true)
     }
 }
 
