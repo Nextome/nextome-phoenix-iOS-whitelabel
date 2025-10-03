@@ -8,7 +8,7 @@ target 'nextome-phoenix-iOS-whitelabel' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'BulletinBoard'
-  pod 'NextomeLocalization', '3.0.2'
+  pod 'NextomeLocalization', '3.0.6'
   pod 'NextomeMapView_Release', '~> 2.0.23.1'
   pod 'Sheeeeeeeeet'
   pod 'KeychainSwift'

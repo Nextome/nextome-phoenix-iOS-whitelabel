@@ -325,7 +325,7 @@ extension MapViewController{
         guard let lastPosition = lastPosition else{
             return
         }
-        nextomeSdk.findPath(venueId: venueId, sourceX: startX, sourceY: startY, sourceMap: startMapId, destX: targetX, destY: targetY, destMap: targetMapId, completionHandler: {vertex, error in
+        nextomeSdk.findPath(venueId: venueId, sourceX: startX, sourceY: startY, sourceMap: startMapId, destX: targetX, destY: targetY, destMap: targetMapId, algorithm: .astar, completionHandler: {vertex, error in
             guard let vertex = vertex else{
                 return
             }
@@ -377,7 +377,7 @@ extension MapViewController{
         
     }
     
-    func showEventDialog(eventId: Int64, message: String){
+    func showEventDialog(eventId: String, message: String){
         let alert = UIAlertController(title: nil, message: message, preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: L10n.genericOk, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
