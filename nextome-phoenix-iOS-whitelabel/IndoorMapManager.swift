@@ -138,27 +138,82 @@ class IndoorMapManager {
     // MARK: Helper -------------------------------------
     
     private func getPath(filename: String, fileType: String = "png") -> String? {
-        
-        let resPath = Bundle.main.resourcePath
+        print("Bundle.main.resourcePath:", Bundle.main.resourcePath ?? "nil")
+        if let items = try? FileManager.default.contentsOfDirectory(atPath: Bundle.main.resourcePath ?? "") {
+            print("Files:", items)
+        }
+
+        guard let bundlePath = Bundle.main.path(forResource: filename, ofType: fileType) else {
+            print("FlutterMapManager.getPath no path found for file: \(filename).\(fileType)")
+            return nil
+        }
+        print("FlutterMapManager.getPath found path is " + bundlePath)
+
+        if(fileType == "png"){
+            if let tmpPath = normalizeAndWriteToTemp(originalPath: bundlePath, filename: filename, fileType: fileType) {
+                print("Normalized image saved to tmp: \(tmpPath)")
+                return tmpPath
+            } else {
+                print("Normalization failed, returning original bundle path (may not be readable by Flutter)")
+                return bundlePath
+            }
+        } else {
+            if let path = Bundle.main.path(forResource: filename, ofType: fileType){
+                print("FlutterMapManager.getPath found path is " + path)
+                return path
+            }else{
+                print("FlutterMapManager.getPath no path found for file: \(filename).\(fileType)")
+            }
+        }
+        return nil
+    }
+
+    func normalizedImage(from path: String) -> UIImage? {
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+              let image = UIImage(data: data) else {
+            print("normalizedImage: cannot load data/image from path: \(path)")
+            return nil
+        }
+
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = image.scale
+        format.opaque = false
+        format.preferredRange = .standard
+
+        let renderer = UIGraphicsImageRenderer(size: image.size, format: format)
+        let normalized = renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: image.size))
+        }
+
+        return normalized
+    }
+
+    @discardableResult
+    func normalizeAndWriteToTemp(originalPath: String, filename: String, fileType: String = "png") -> String? {
+        guard let normalized = normalizedImage(from: originalPath) else {
+            print("normalizeAndWriteToTemp: normalized conversion failed")
+            return nil
+        }
+
+        guard let pngData = normalized.pngData() else {
+            print("normalizeAndWriteToTemp: cannot get pngData()")
+            return nil
+        }
+
+        let tmpDir = FileManager.default.temporaryDirectory
+        let tmpFilename = "\(filename)-normalized.\(fileType)"
+        let tmpURL = tmpDir.appendingPathComponent(tmpFilename)
 
         do {
-            let items = try FileManager.default.contentsOfDirectory(atPath: resPath!)
-            for item in items {
-                print ("   item: " + item)
-            }
+            try pngData.write(to: tmpURL, options: .atomic)
+            let exists = FileManager.default.fileExists(atPath: tmpURL.path)
+            let attrs = try FileManager.default.attributesOfItem(atPath: tmpURL.path)
+            print("normalizeAndWriteToTemp: wrote file at \(tmpURL.path), exists: \(exists), size: \(attrs[.size] ?? "unknown")")
+            return tmpURL.path
         } catch {
-            print("IndoorMapManager.getPath exception: \(error)")
+            print("normalizeAndWriteToTemp: write error: \(error)")
+            return nil
         }
-        
-        
-        if let path = Bundle.main.path(forResource: filename, ofType: fileType){
-            print("IndoorMapManager.getPath found path is " + path)
-            return path
-        }else{
-            print("IndoorMapManager.getPath no path found for file: \(filename).\(fileType)")
-        }
-        
-        return nil
     }
 }
 

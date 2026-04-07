@@ -168,9 +168,17 @@ class MapViewController: UIViewController {
                 self.changeAlertText("Searching Venue")
             }else if let getPacketState = state as? GetPacketState{
                 self.changeAlertText("Downloading venue \(getPacketState.venueId)...")
-            }else if let findFloorState = state as? FindFloorState{
-                self.changeAlertText("Finding current Floor on venue \(findFloorState.venueId)...")
-                self.viewModel.venueSettings = findFloorState.venueData.settings
+            }else if let evaluateIndoorOutdoorState = state as? EvaluateIndoorOutdoorState{
+                if(evaluateIndoorOutdoorState.detectionType != nil){
+                    if(evaluateIndoorOutdoorState.detectionType!.lowercased() == "gps"){
+                        self.changeAlertText("Detected near venue \(evaluateIndoorOutdoorState.venueId)\nWaiting to be located inside...")
+                    }else{
+                        self.changeAlertText("Finding current Floor on venue \(evaluateIndoorOutdoorState.venueId)...")
+                    }
+                }else{
+                    self.changeAlertText("Switched outdoor venue \(evaluateIndoorOutdoorState.venueId)\nWaiting to be located inside...")
+                }
+                self.viewModel.venueSettings = evaluateIndoorOutdoorState.venueData.settings
             }else if let runningState = state as? LocalizationRunningState{
                 print("State is RUNNING")
                 self.statusView.isHidden = true
@@ -265,6 +273,8 @@ class MapViewController: UIViewController {
             showGenericError(message: error.message)
         }else if let authError = error as? InvalidCredentialException{
             showAuthErrorAlertAndLogout(authError.message)
+        }else if let critialError = error as? CriticalException{
+            showGenericError(message: error.message)
         }
 
     }
