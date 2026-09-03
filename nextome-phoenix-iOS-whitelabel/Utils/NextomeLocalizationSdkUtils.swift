@@ -5,7 +5,8 @@ import NextomeLocalization
 class NextomeLocalizationSdkUtils{
     static func getSdkBuilder(fromSettings settings: NextomeAppSettings, clientId: String, clientSecret: String) -> NextomeLocalizationSdk.Builder{
         
-        let builder = NextomeLocalizationSdk.Builder(clientId: clientId, clientSecret: clientSecret)
+        let credentials = ClientSecretCredentials(clientId: clientId, clientSecret: clientSecret)
+        let builder = NextomeLocalizationSdk.Builder(baseUrl: nil, sdkCredentials: credentials, canDebug: false)
         
         if let scanPeriod = settings.scanPeriod{
             builder.setScanPeriod(millis: scanPeriod)

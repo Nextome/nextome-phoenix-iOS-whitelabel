@@ -25,7 +25,7 @@ class IndoorMapManager {
     func loadMapTiles(mapId: Int, mapTilesUrl: String, mapHeight: Int, mapWidth: Int){
         var tile: NMTile = NMTile(name: "\(mapId)", id: "\(mapId)", source: mapTilesUrl)
         tile.show = true
-        flutterMap.setResources(tiles: [tile], zoom: 1, width: mapWidth, height: mapHeight)
+        flutterMap.setResources(tiles: [tile], zoom: 1, deepZoom: true, width: mapWidth, height: mapHeight)
     }
     
     func setIndoorMapItems(){
