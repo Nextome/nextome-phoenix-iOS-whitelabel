@@ -166,6 +166,12 @@ class MapViewController: UIViewController {
                 self.openOutdoorMap()
                 self.viewModel.venueSettings = nil
                 self.changeAlertText("Searching Venue")
+            }
+            else if state is NoVenueState{
+                self.viewModel.poiList = nil
+                self.openOutdoorMap()
+                self.viewModel.venueSettings = nil
+                self.changeAlertText("No venue found")
             }else if let getPacketState = state as? GetPacketState{
                 self.changeAlertText("Downloading venue \(getPacketState.venueId)...")
             }else if let evaluateIndoorOutdoorState = state as? EvaluateIndoorOutdoorState{
