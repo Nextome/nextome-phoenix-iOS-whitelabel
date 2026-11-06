@@ -1,4 +1,4 @@
-platform :ios, '13.2'
+platform :ios, '17.6'
 
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/Nextome/Specs.git'
@@ -8,8 +8,8 @@ target 'nextome-phoenix-iOS-whitelabel' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'BulletinBoard'
-  pod 'NextomeLocalization', '3.4.0'
-  pod 'NextomeMapView_Release', '~> 2.1.10.1'
+  pod 'NextomeLocalization', '3.5.0'
+  pod 'NextomeMapView_Release', '~> 2.1.14.2'
   pod 'Sheeeeeeeeet'
   pod 'KeychainSwift'
   pod 'Resolver'
@@ -24,7 +24,7 @@ post_install do |installer|
     installer.generated_projects.each do |project|
           project.targets.each do |target|
               target.build_configurations.each do |config|
-                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.2'
+                  config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '17.6'
                end
           end
    end
